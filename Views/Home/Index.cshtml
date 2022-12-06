@@ -1,8 +1,91 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@*@model List<Portfolio>*@
+
+@{
+    ViewData["Title"] = "صفحه اصلی سایت";
+}
+@section SEO
+{
+    <meta name="keywords" content="صفحه اصلی, نمونه کارها , صفحه معرفی شخصی , صفحه مشخصات" />
+    <meta name="description" content="contact description" />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<section id="one">
+    <header class="major">
+        <h2>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+            @*@ViewData["headingTitle"]*@
+        </h2>
+    </header>
+    <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها 
+        و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، 
+        کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
+        ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
+        شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        @*@ViewBag.headingText*@
+    </p>
+</section>
+
+<section id="two">
+    <h2>نمونه کارهای اخیر</h2>
+    <div class="row">
+        <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
+            <a href="~/images/thumbs/01.jpg" class="image fit thumb" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@>
+                <img src="~/images/thumbs/01.jpg" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@ />
+            </a>
+            <h3>@*@portfolio.Title*@
+                لورم اپیسوم متن ساختگی 1 </h3>
+            <p>
+                @*@portfolio.Description*@
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+            </p>
+        </article>
+        <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
+            <a href="~/images/thumbs/02.jpg" class="image fit thumb" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@>
+                <img src="~/images/thumbs/02.jpg" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@ />
+            </a>
+            <h3>@*@portfolio.Title*@
+                لورم اپیسوم متن ساختگی 1 </h3>
+            <p>
+                @*@portfolio.Description*@
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+            </p>
+        </article>
+        <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
+            <a href="~/images/thumbs/03.jpg" class="image fit thumb" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@>
+                <img src="~/images/thumbs/03.jpg" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@ />
+            </a>
+            <h3>@*@portfolio.Title*@
+                لورم اپیسوم متن ساختگی 1 </h3>
+            <p>
+                @*@portfolio.Description*@
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+            </p>
+        </article>
+        <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
+            <a href="~/images/thumbs/04.jpg" class="image fit thumb" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@>
+                <img src="~/images/thumbs/04.jpg" alt=@*"@portfolio.Title"*@ title=@*"@portfolio.Description"*@ />
+            </a>
+            <h3>@*@portfolio.Title*@
+                لورم اپیسوم متن ساختگی 1 </h3>
+            <p>
+                @*@portfolio.Description*@
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+            </p>
+        </article>
+
+        @*@foreach (var portfolio in Model)
+            {
+                <article class="6u 12u$(xsmall) work-item" style="width: 33%;">
+                    <a href="~/images/thumbs/@portfolio.Image" class="image fit thumb" alt="@portfolio.Title" title="@portfolio.Description">
+                        <img src="~/images/thumbs/@portfolio.Image" alt="@portfolio.Title" title="@portfolio.Description" />
+                    </a>
+                    <h3>@portfolio.Title</h3>
+                    <p>@portfolio.Description</p>
+                </article>
+            }*@
+
+    </div>
+</section>
