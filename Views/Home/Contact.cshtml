@@ -18,19 +18,52 @@
 
 <section id="two">
     <div class="row">
-        <table>
+        <table id="tbl">
             <tr>
                 <td>Email:</td>
-                <td>Alimohammadzade7976@gmail.com</td>
+                <td id="email"></td>
             </tr>
             <tr>
                 <td>Mobile:</td>
-                <td>09383738757</td>
+                <td id="mobile"></td>
             </tr>
             <tr>
                 <td>Github:</td>
-                <td>github.com/Alimoh1372</td>
+                <td id="mobile"></td>
             </tr>
         </table>
     </div>
 </section>
+@section Scripts
+{
+    <script>
+        try {
+        var result;
+        var hosturl = location.protocol + "//" + location.host;
+        window.onload=function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("get",myHost+"@Url.Action("GetContact")", true);
+            xhr.responseType = "json";
+            xhr.send(null);
+            
+            xhr.onload=function() {
+                if (xhr.readyState == 4 && xhr.status<=300 || xhr.status==304) {
+                    var resp = xhr.response;
+                    console.log("response from controller:"+resp.toString());
+                   
+                    var table = document.getElementById("tbl");
+                    table.rows[0].cells[1].innerHTML = resp.email;
+                    table.rows[1].cells[1].innerHTML = resp.number;
+                    table.rows[2].cells[1].innerHTML = resp.github;
+                } 
+            };
+            xhr.onerror= function() {
+                console.log("error message:"+xhr.status+"-"+xhr.statusText);
+            }
+           
+            };
+        } catch (e) {
+            console.log("Error:"+e.message);
+        }
+    </script>
+}
