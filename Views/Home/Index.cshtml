@@ -32,12 +32,12 @@
 
     <div class="row" id="postsDiv">
 
-        @{
+        @*@{
                 foreach (Portfolio portfolio in Model)
                 {
                     <article class="6u 12u$(xsmall) work-item">
                         <a href="~/images/thumbs/@portfolio.Image" class="image fit thumb" alt="@portfolio.Title" title="@portfolio.Description">
-                            <img src="~/images/thumbs/@portfolio.Image" alt="@portfolio.Title" title="@portfolio.Description"/>
+                            <img src="~/images/thumbs/@portfolio.Image" alt="@portfolio.Title" title="@portfolio.Description" />
                         </a>
                         <h3>
                             @portfolio.Title
@@ -47,7 +47,8 @@
                         </p>
                     </article>
                 }
-            }
+
+            }*@
 
 
 
@@ -63,87 +64,92 @@
             }*@
 
     </div>
-</section>
-@section Scripts
-{
     <script>
+        console.log(document.getElementById("postsDiv"));
+        let hostUrl = location.protocol + "//" + location.host;
+        let getPortfiliosUrl = hostUrl + "@Url.Action("GetPortfolios")";
+        let req = new XMLHttpRequest();
+        req.open("get", getPortfiliosUrl);
+        req.responseType = "json";
+        req.send(null);
+        req.onreadystatechange = function() {
+            if (req.readyState == 4) {
+                if ((req.status > 0 && req.status <= 300) || req.status == 304) {
+                    let resp = req.response;
+                    let rowClass = document.getElementById("postsDiv");
+                    for (var i = 0; i < resp.length; i++) {
+                        let article = document.createElement('article');
+                        article.classList = "6u 12u$(xsmall) work-item";
+                        //make h3
 
-            window.addEventListener("load", fillSectionRow);
-            var getPortfiliosUrl = myHost + "@Url.Action("GetPortfolios")";
-
-            function fillSectionRow() {
-
-                var req = new XMLHttpRequest();
-                req.open("get", getPortfiliosUrl);
-                req.responseType = "json";
-                req.send(null);
-                req.onreadystatechange = function() {
-                    if (req.readyState == 4) {
-                        @*<article class="6u 12u$(xsmall) work-item">
-                            <a href="~/images/thumbs/@portfolio.Image" class="image fit thumb" alt="@portfolio.Title" title="@portfolio.Description">
-                            <img src="~/images/thumbs/@portfolio.Image" alt="@portfolio.Title" title="@portfolio.Description"/>
-                            </a>
-                            <h3>
-                            @portfolio.Title
-                            </h3>
-                            <p>
-                            @portfolio.Description
-                            </p>
-                            </article>*@
-                        if ((req.status > 0 && req.status <= 300) || req.status == 304) {
-                            var resp = req.response;
-                            var rowClass = document.getElementById("postsDiv");
-                            resp.forEach(makeSection);
-
-                            function makeSection(item, index) {
-                                var article = document.createElement('article');
-
-                                
-                                article.classList = "6u 12u$(xsmall) work-item";
+                        let h3 = document.createElement('h3');
+                        h3.innerText = resp[i].title;
+                        article.appendChild(h3);
 
 
-                                var aLink = document.createElement('a');
-
-                                aLink.href;
-                                aLink.classList = "image fit thumb";
-                                aLink.alt = item.title;
-                                aLink.title = item.description;
-                                article.appendChild(aLink);
-
-                               
-
-                                
-
-
-                                var h3 = document.createElement('h3');
-                                h3.innerText = item.title;
-                                article.appendChild(h3);
-
-                                var p = document.createElement('p');
-                                p.innerText = item.description;
-
-                                article.appendChild(p);
-                                //make the image
-                                var img = document.createElement('img');
-                                img.src = "/images/thumbs/" + item.image;
-                                img.alt = item.title;
-                                img.title = item.description;
+                        //make p
+                        let p = document.createElement('p');
+                        p.innerText = resp[i].description;
+                        article.appendChild(p);
 
 
 
-                                
-                                aLink.appendChild(img);
+                        //make the image
+                        let img = document.createElement('img');
+                        img.src = "/images/thumbs/" + resp[i].image;
+                        img.alt = "";
+                        img.title = resp[i].title;
 
-                                rowClass.appendChild(article);
+                        //make a link
+                        let aLink = document.createElement('a');
 
-                            }
-                        } else {
-                            console.log("Error:status=" + req.status + "-" + req.statusText);
-                        }
+                        aLink.href = "/images/thumbs/" + resp[i].image;;
+                        aLink.classList = "image fit thumb";
+                        aLink.alt = "";
+                        aLink.title = resp[i].title;
+                        aLink.appendChild(img);
+                        article.appendChild(aLink);
+
+                        article.insertBefore(aLink, h3);
+                        console.log(article);
+                        rowClass.appendChild(article);
+
                     }
-
                 }
-            }
-
+                else {
+                    console.log("Error:status=" + req.status + "-" + req.statusText);
+                }
+            } 
+        }
     </script>
-}
+    
+</section>
+<script src="~/js/jquery.min.js"></script>
+
+<script src="~/js/jquery.poptrox.min.js"></script>
+<script>
+   
+    $(function() {
+        $('#two').poptrox({
+            caption: function ($a) { return $a.next('h3').text(); },
+            overlayColor: '#2c2c2c',
+            overlayOpacity: 0.85,
+            popupCloserText: '',
+            popupLoaderText: '',
+            selector: '.work-item a',
+            usePopupCaption: true,
+            usePopupDefaultStyling: false,
+            usePopupEasyClose: false,
+            usePopupNav: true,
+            windowMargin: (skel.isActive('small') ? 0 : 50)
+        });
+    });
+   
+    window.onload = function() {
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
+    }
+</script>
+

@@ -108,19 +108,19 @@ var myHost = location.protocol + "//" + location.host;
             // Main Sections: Two.
 
             // Lightbox gallery.
-            $('#two').poptrox({
-                caption: function ($a) { return $a.next('h3').text(); },
-                overlayColor: '#2c2c2c',
-                overlayOpacity: 0.85,
-                popupCloserText: '',
-                popupLoaderText: '',
-                selector: '.work-item a',
-                usePopupCaption: true,
-                usePopupDefaultStyling: false,
-                usePopupEasyClose: false,
-                usePopupNav: true,
-                windowMargin: (skel.isActive('small') ? 0 : 50)
-            });
+            //$('#two').poptrox({
+            //    caption: function ($a) { return $a.next('h3').text(); },
+            //    overlayColor: '#2c2c2c',
+            //    overlayOpacity: 0.85,
+            //    popupCloserText: '',
+            //    popupLoaderText: '',
+            //    selector: '.work-item a',
+            //    usePopupCaption: true,
+            //    usePopupDefaultStyling: false,
+            //    usePopupEasyClose: false,
+            //    usePopupNav: true,
+            //    windowMargin: (skel.isActive('small') ? 0 : 50)
+            //});
 
         });
 
