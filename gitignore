@@ -3,6 +3,26 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Visual Studio / .NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Frontend
+node_modules/
+dist/
+build/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
 # User-specific files
 *.rsuser
 *.suo

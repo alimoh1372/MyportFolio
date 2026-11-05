@@ -50,21 +50,19 @@
               "RelativeToolTip": "PortfolioManager.Backend.Desktop\\Controllers\\PortfolioController.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAA4wA4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T14:03:06.497Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T14:03:06.497Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PortfolioManager.Backend.Desktop",
+              "Title": "PortfolioManager.Backend.Desktop.csproj",
               "DocumentMoniker": "D:\\backup data Internet\\TAMRIN\\Portfolio\\MainPortfolio\\PortfolioManager\\PortfolioManager.Backend.Desktop\\PortfolioManager.Backend.Desktop.csproj",
               "RelativeDocumentMoniker": "PortfolioManager.Backend.Desktop\\PortfolioManager.Backend.Desktop.csproj",
               "ToolTip": "D:\\backup data Internet\\TAMRIN\\Portfolio\\MainPortfolio\\PortfolioManager\\PortfolioManager.Backend.Desktop\\PortfolioManager.Backend.Desktop.csproj",
               "RelativeToolTip": "PortfolioManager.Backend.Desktop\\PortfolioManager.Backend.Desktop.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-05T14:02:39.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T14:02:39.574Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "PortfolioManager.Backend.Desktop\\appsettings.Database.Example.jsonc",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-11-05T13:58:43.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T13:58:43.849Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "PortfolioManager.Backend.Desktop\\appsettings.SqlServer.example.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-05T13:58:40.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T13:58:40.787Z"
             },
             {
               "$type": "Document",
@@ -102,8 +98,7 @@
               "RelativeToolTip": "PortfolioManage.Backend.Infrastructure\\Extensions\\DependencyInjection.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAUwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T13:51:16.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T13:51:16.594Z"
             },
             {
               "$type": "Document",
@@ -115,8 +110,7 @@
               "RelativeToolTip": "PortfolioManager.Backend.Desktop\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-05T13:49:49.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T13:49:49.683Z"
             },
             {
               "$type": "Document",
@@ -126,7 +120,7 @@
               "RelativeDocumentMoniker": "PortfolioManager.Backend.Desktop\\Program.cs",
               "ToolTip": "D:\\backup data Internet\\TAMRIN\\Portfolio\\MainPortfolio\\PortfolioManager\\PortfolioManager.Backend.Desktop\\Program.cs",
               "RelativeToolTip": "PortfolioManager.Backend.Desktop\\Program.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAcwLkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-05T13:49:15.491Z",
               "EditorCaption": ""
