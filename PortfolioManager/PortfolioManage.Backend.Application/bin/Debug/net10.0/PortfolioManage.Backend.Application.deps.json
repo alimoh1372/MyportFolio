@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "PortfolioManage.Backend.Application/1.0.0": {
+        "dependencies": {
+          "PortfolioManage.Backend.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PortfolioManage.Backend.Application.dll": {}
+        }
+      },
+      "PortfolioManage.Backend.Domain/1.0.0": {
+        "runtime": {
+          "PortfolioManage.Backend.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PortfolioManage.Backend.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PortfolioManage.Backend.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

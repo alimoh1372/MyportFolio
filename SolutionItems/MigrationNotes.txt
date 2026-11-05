@@ -1,0 +1,10 @@
+ //Migrations
+ 
+ 
+ //SqliteMigration
+ Add-Migration "InitialCreate" -Project Backend\Src\Infrastructure\PortfolioManage.Backend.Infrastructure.SqliteMigrations -StartupProject Backend\Src\Presentation\Desktop\PortfolioManager.Backend.Desktop -Context PortfolioDbContext -OutputDir Migrations
+ 
+ 
+ 
+ //SqlServer migrations
+ Add-Migration "InitialCreate" -Project Backend\Src\Infrastructure\PortfolioManage.Backend.Infrastructure.SqlServerMigrations -StartupProject Backend\Src\Presentation\Desktop\PortfolioManager.Backend.Desktop -Context PortfolioDbContext -OutputDir Migrations

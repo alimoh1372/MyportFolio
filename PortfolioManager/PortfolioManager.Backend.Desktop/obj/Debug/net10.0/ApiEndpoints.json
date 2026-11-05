@@ -1,0 +1,92 @@
+[
+  {
+    "ContainingType": "PortfolioManager.Backend.Desktop.Controllers.PortfolioController",
+    "Method": "Deposit",
+    "RelativePath": "api/deposits",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PortfolioManage.Backend.Domain.Dtos.CapitalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PortfolioManager.Backend.Desktop.Controllers.PortfolioController",
+    "Method": "GetOperations",
+    "RelativePath": "api/operations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "take",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PortfolioManager.Backend.Desktop.Controllers.PortfolioController",
+    "Method": "CreatePartner",
+    "RelativePath": "api/partners",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PortfolioManage.Backend.Domain.Dtos.CreatePartnerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PortfolioManager.Backend.Desktop.Controllers.PortfolioController",
+    "Method": "GetPortfolio",
+    "RelativePath": "api/portfolio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PortfolioManager.Backend.Desktop.Controllers.PortfolioController",
+    "Method": "UpdateValuation",
+    "RelativePath": "api/portfolio/valuation",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PortfolioManage.Backend.Domain.Dtos.ValuationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PortfolioManager.Backend.Desktop.Controllers.PortfolioController",
+    "Method": "Withdraw",
+    "RelativePath": "api/withdrawals",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PortfolioManage.Backend.Domain.Dtos.CapitalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

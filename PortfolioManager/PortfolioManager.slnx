@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Backend/" />
+  <Folder Name="/Backend/Src/" />
+  <Folder Name="/Backend/Src/Application/">
+    <Project Path="PortfolioManage.Backend.Application/PortfolioManage.Backend.Application.csproj" Id="bfa4bcd0-7043-4e8d-98e1-c4a9ac597b3b" />
+  </Folder>
+  <Folder Name="/Backend/Src/Domain/">
+    <Project Path="PortfolioManage.Backend.Domain/PortfolioManage.Backend.Domain.csproj" Id="2f75d7f3-d427-4434-b424-4d07b6ec8be9" />
+  </Folder>
+  <Folder Name="/Backend/Src/Infrastructure/">
+    <Project Path="PortfolioManage.Backend.Infrastructure.SqliteMigrations/PortfolioManage.Backend.Infrastructure.SqliteMigrations.csproj" Id="079a0308-447f-449d-a61a-265863fb7c17" />
+    <Project Path="PortfolioManage.Backend.Infrastructure.SqlServerMigrations/PortfolioManage.Backend.Infrastructure.SqlServerMigrations.csproj" Id="b51c9d3d-fe54-483f-90dc-d42a7ac2d063" />
+    <Project Path="PortfolioManage.Backend.Infrastructure/PortfolioManage.Backend.Infrastructure.csproj" Id="88adf15b-2749-426d-8d7c-342b7570b574" />
+  </Folder>
+  <Folder Name="/Backend/Src/Presentation/" />
+  <Folder Name="/Backend/Src/Presentation/Desktop/">
+    <Project Path="PortfolioManager.Backend.Desktop/PortfolioManager.Backend.Desktop.csproj" Id="a8340b85-7872-4ffa-b4ef-656d639db16a" />
+  </Folder>
+</Solution>
