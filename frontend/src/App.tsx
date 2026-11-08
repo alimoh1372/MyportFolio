@@ -509,7 +509,7 @@ export default function App() {
 
             <header>
                 <div>
-                    <small>PORTFOLIO MANAGER - BUILD TEST 20261105</small>
+                    <small>PORTFOLIO MANAGER</small>
                     <h1>مدیریت پرتفو</h1>
                 </div>
 

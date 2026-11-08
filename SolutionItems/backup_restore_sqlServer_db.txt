@@ -1,0 +1,52 @@
+
+--Backup 
+BACKUP DATABASE [PortfolioManager]
+TO DISK = N'F:\Public project\WorkingProjects\MyportFolio\SolutionItems\SqlDbBackup\PortfolioManager_Full.bak'
+WITH
+    FORMAT,
+    INIT,
+    COMPRESSION,
+    CHECKSUM,
+    STATS = 10;
+	
+	
+--test backup is correct 
+
+
+RESTORE VERIFYONLY
+FROM DISK = N'F:\Public project\WorkingProjects\MyportFolio\SolutionItems\SqlDbBackup\PortfolioManager_Full.bak'
+WITH CHECKSUM;
+
+
+--Restore backup
+
+--1- اول نام منطقی فایل‌های داخل بکاپ را بگیر:
+
+RESTORE FILELISTONLY
+FROM DISK = N'pathOnDestinationServer\PortfolioManager_Full.bak';
+
+--result is such:
+--LogicalName		Type
+--PortfolioManager		D
+--PortfolioManager_log	L
+
+
+-2-	حالا روی سرور مقصد اجرا کن:
+
+RESTORE DATABASE [PortfolioManager]
+FROM DISK = N'pathOnDestinationServer\PortfolioManager_Full.bak'
+WITH
+    MOVE N'PortfolioManager'
+        TO N'D:\SQLData\PortfolioManager.mdf',
+    MOVE N'PortfolioDb_log'
+        TO N'D:\SQLData\PortfolioManager_log_log.ldf',
+    RECOVERY,
+    CHECKSUM,
+    STATS = 10;
+	
+	
+	
+--3-تست سلامت دیتابیس
+--بعد از Restore می‌توانی اجرا کنی:
+
+DBCC CHECKDB ([PortfolioManager]) WITH NO_INFOMSGS;
