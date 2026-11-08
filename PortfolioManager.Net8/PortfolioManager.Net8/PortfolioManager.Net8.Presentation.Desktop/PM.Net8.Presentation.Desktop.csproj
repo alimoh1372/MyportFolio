@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
+	</PropertyGroup>
+
+	
+	<ItemGroup>
+		<Content Include="appsettings.Database.Example.jsonc">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="appsettings.SqlServer.example.jsonc">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Photino.NET" Version="4.0.16" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.22">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\PortfolioManager.Net8.Infrastructure.SqliteMigrations\PM.Net8.Infrastructure.SqliteMigrations.csproj" />
+		<ProjectReference Include="..\PortfolioManager.Net8.Infrastructure.SqlServerMigrations\PM.Net8.Infrastructure.SqlServerMigrations.csproj" />
+		<ProjectReference Include="..\PortfolioManager.Net8.Infrastructure\PM.Net8.Infrastructure.csproj" />
+		<ProjectReference Include="..\PortfolioManager.Net8.Presentation.Api\PM.Net8.Presentation.Api.csproj" />
+	</ItemGroup>
+
+</Project>

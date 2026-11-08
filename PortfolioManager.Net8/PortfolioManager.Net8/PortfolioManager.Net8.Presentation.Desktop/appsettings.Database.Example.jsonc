@@ -1,0 +1,9 @@
+{
+  "Database": { "Provider": "Sqlite" }, // change to SqlServer to switch provider
+  "ConnectionStrings": {
+    "Sqlite": "Data Source=D:\\PortfolioManager\\Data\\portfolio-manager.db"
+    //,
+    // SQL Server alternative; uncomment and comment/remove Sqlite above:
+    // "SqlServer": "Server=localhost;Database=PortfolioManager;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}

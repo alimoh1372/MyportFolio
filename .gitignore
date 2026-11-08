@@ -26,12 +26,13 @@
 # ==========================================
 # وابستگی‌ها
 node_modules/
+dist/
+dist-ssr/
+
 .pnp
 .pnp.js
 
 # خروجی بیلد Vite
-dist/
-dist-ssr/
 build/
 *.local
 
